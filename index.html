@@ -1,3 +1,53 @@
-<video width="320" height="240" controls >
-<source scr="https://p21oger.github.io/globalwarmingvideo.github.io/CheeziPuffs.mov" type="video/mov">
-</video>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Video Player</title>
+	<style>
+		body{
+			background-color:black;
+			color:aqua;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<h1>Simple Video player</h1>
+	<div>
+		<button onclick = "playPause()">Play/Pause</button>
+		<button onclick = "makeBig()">Big</button>
+		<button onclick = "makeSmall()">Small</button>
+		<button onclick = "makeNormal()">Normal</button>
+		<br>
+		<br>
+		
+		<video id="video" width="420">
+			<source src="CheeziPuffs.mov" type="video/mov">
+			Your browser does not support HTML5 video
+		</video>
+	</div>
+	
+	<script>
+		var myVideo = document.getElementById('video');
+		
+		function playPause(){
+			if(myVideo.paused){
+				myVideo.play();
+			}
+			else myVideo.pause();
+		}
+		
+		function makeBig(){
+			myVideo.width = 560;
+		}
+		
+		function makeSmall(){
+			myVideo.width = 320;
+		}
+		
+		function makeNormal(){
+			myVideo.width = 420;
+		}
+	</script>
+</body>
+</html>
