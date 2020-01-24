@@ -11,5 +11,6 @@ a:visited {
 }
 a:link {
   text-decoration: none;
+  color: green;
 }
 /* end of styling links */
